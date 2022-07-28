@@ -1,1 +1,1 @@
-
+Positional Weight Matrices for getting protein sequence scores.
