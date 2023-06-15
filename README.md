@@ -1,23 +1,19 @@
-# 
+# Brief description of scripts
 
-The tool for predicting probabilities of proteolytic events in proteins. It based on ML algorithms and data from CutDB database.
+- ***1_download_structure_with_sep_chain.py***: a) to download experimentally verified structures from [RCSB PDB](https://www.rcsb.org/) or modelled structures from [AlphaFold Protein Structure Database](https://alphafold.ebi.ac.uk/); b) to extract specific protein chain from pdb-file with the whole structure into separate pdb-file (only for experimental structures).
 
-## Scripts. Brief Description.
+- ***2_del_ligands_pyv2.py***: a) to remove ligands from pdb-file with specific protein chain using [Chimera](http://www.cgl.ucsf.edu/chimera) tool.
 
-- ***run.py*** is the main script for predicting scores of proteolytic cleavage sites. It runs the scripts located in the "scripts" directory and outputs log information in response.
+- ***3_parse_pdb.py***: a) to extract "b-factor" values (one of the structural features); b) to map polypeptide sequence and structure positions.
 
-- ***1_download_structure_with_sep_chain.py*** is the script for downloading structure data and extracting separate protein chain data from it. Structure will be downloading from [PDB database.](https://www.rcsb.org/)
+- ***3_parse_pdb_with_cuts.py***: a) to extract "b-factor" values (one of the structural features); b) to map polypeptide sequence and structure positions; c) to map proteolytic cleavage sites from sequence into structure.
 
-- ***2_del_ligands_pyv2.py*** is the script for removing ligands from structure data using [Chimera tool.](http://www.cgl.ucsf.edu/chimera)
+- ***4_create_dssp.py***: a) to generate dssp-files locally or remotely using pdb-files. 
 
-- ***3_parse_pdb.py*** is the script for mapping proteolytic cleavage sites onto the structure and extracting feature information of b-factor.
+- ***5_extract_features.py***: a) to extract feature information from DSSP files - initial type of secondary structure, solvent accessibility and others; b) to generate ad-hoc features - length of loop, type of secondary structure, terminal regions - based on information of initial type of secondary structure; c) to map structure information between DSSP files and PDB files.
 
-- ***4_create_dssp.py*** is the script for generating DSSP files from PDB files of structure data.
+- ***6_norm_data.py***: a) to apply normalisation of features for variables with float type; b) to generate dummy variables from secondary structure information. As a rule, we only apply normalisation within the protein structure chain. While creating of training dataset we applied two mode of normalisation: within the protein structure chain and within the whole dataset. 
 
-- ***5_extract_features.py*** is the script for extracting feature information from DSSP files and generating ad-hoc feature information as well as for mapping structure information from DSSP files and PDB files.
-
-- ***6_norm_data.py*** is the script for normalisation of features with float types and generating dummy variables from secondary structure information.
-
-- ***7_get_structural_score.py*** is the script for predicting scores of proteolytic cleavage sites using our structural model located in the "models" directory.
+- ***7_get_score.py*** is the script for predicting scores of proteolytic cleavage sites using our structural model located in the "models" directory.
 
 - ***map_scores_pyv2.py*** is the optional script for visualisation of proteolytic cleavage site scores predicted.
