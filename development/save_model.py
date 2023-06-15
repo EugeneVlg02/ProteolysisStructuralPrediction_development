@@ -56,22 +56,3 @@ clf.fit(X_train, y_train)
 
 with open(os.path.join(model_path, 'structural_model.pkl'), 'wb') as file:
     cPickle.dump(clf, file)
-
-''' Train data from E.coli experiment to get total score '''
-TrainData_Ecoli = pd.read_csv("/data2/Protease/create_model_step/test_data_model/test_structures/TrainData_Ecoli.csv")
-
-X_TrainData_Ecoli = TrainData_Ecoli[["MMP9_MMP25_PMAP", "LinearDA_Scikit_score"]].values
-y_TrainData_Ecoli = TrainData_Ecoli["is_cut"].values
-
-positive_indices = np.where(y_TrainData_Ecoli == 1)[0]
-negative_indices = np.where(y_TrainData_Ecoli == 0)[0]
-sample_indices = form_sample(positive_indices, negative_indices, "OneToOne")
-
-X_TrainData_Ecoli = X_TrainData_Ecoli[sample_indices]
-y_TrainData_Ecoli = y_TrainData_Ecoli[sample_indices]
-
-clf = GaussianNB()
-clf.fit(X_TrainData_Ecoli, y_TrainData_Ecoli)
-
-with open(os.path.join(model_path, 'total_model.pkl'), 'wb') as file:
-    cPickle.dump(clf, file)
