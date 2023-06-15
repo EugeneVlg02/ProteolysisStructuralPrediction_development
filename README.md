@@ -28,6 +28,8 @@
 
 - ***evaluate_features.py***: a) to estimate predictive performance of specific structural features; b) to visualise estimates.
 
+- ***filter_blastp.py***: a) to filter BLASTp output with conditions: 1) % identity >= 90; 2) % coverage >= 67  
+
 - ***map_cuts_pyv2.py***: a) to visualise (map) proteolytic cleavage sites onto structures using Chimera.  
 
 - ***map_scores_pyv2.py***: a) to visualise (map) proteolytic cleavage scores onto structures using Chimera.
@@ -39,5 +41,3 @@
 - ***save_model.py***: a) to save ML model.
 
 - ***statistics*.py***: a) to get summary statistics - the number of unique protein substrate ID, the number of unique structure ID, the number of proteolytic cleavage sites, the number of proteases - on the different step of creating training dataset.
-
-- 
