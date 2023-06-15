@@ -40,4 +40,4 @@
 
 - ***save_model.py***: a) to save ML model.
 
-- ***statistics*.py***: a) to get summary statistics - the number of unique protein substrate ID, the number of unique structure ID, the number of proteolytic cleavage sites, the number of proteases - on the different step of creating training dataset.
+- ***statistics_\*.py***: a) to get summary statistics - the number of unique protein substrate ID, the number of unique structure ID, the number of proteolytic cleavage sites, the number of proteases - on the different step of creating training dataset.
