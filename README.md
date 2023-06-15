@@ -4,4 +4,4 @@ The tool for predicting probabilities of proteolytic events in proteins. It base
 
 ## Scripts
 
-***run.py*** is the main script for predicting scores of proteolytic cleavage sites. It runs the scripts located in the "scripts" directory and outputs log information in response.
+- ***run.py*** is the main script for predicting scores of proteolytic cleavage sites. It runs the scripts located in the "scripts" directory and outputs log information in response.
