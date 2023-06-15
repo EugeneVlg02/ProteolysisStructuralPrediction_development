@@ -20,4 +20,4 @@ The tool for predicting probabilities of proteolytic events in proteins. It base
 
 - ***7_get_structural_score.py*** is the script for predicting scores of proteolytic cleavage sites using our structural model located in the "models" directory.
 
-- ***map_scores_pyv2.py*** is the optional script for visualisation of proteolytic cleavage sites scores predicted.
+- ***map_scores_pyv2.py*** is the optional script for visualisation of proteolytic cleavage site scores predicted.
