@@ -1,3 +1,5 @@
+The scripts were developed as part of the study titled ***"Predicting structural susceptibility of proteins to proteolytic processing"***, which has been submitted to IJMS (International Journal of Molecular Sciences).
+
 # Brief description of scripts
 
 - ***1_download_structure_with_sep_chain.py***: a) to download experimentally verified structures from [RCSB PDB](https://www.rcsb.org/) or modelled structures from [AlphaFold Protein Structure Database](https://alphafold.ebi.ac.uk/); b) to extract specific protein chain from pdb-file with the whole structure into separate pdb-file (only for experimental structures).
